@@ -9,7 +9,7 @@ do
     for platform in ${PLATFORMS}
     do
         docker pull ubuntu:$tag --platform $platform 
-        docker buildx build -f Dockerfile --platform $platform -t liyane/ubuntu-unminimized:$tag --build-arg TAG=$tag --push.
+        docker buildx build -f Dockerfile --platform $platform -t liyane/ubuntu-unminimized:$tag --build-arg TAG=$tag --push .
     done
 
 done
