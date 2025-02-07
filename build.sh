@@ -8,8 +8,8 @@ for tag in ${TAGS}
 do
     for platform in ${PLATFORMS}
     do
-        echo docker pull ubuntu:$tag --platform $platform 
-        echo docker buildx build -f Dockerfile --platform $platform -t liyane/ubuntu-unminimized:$tag --build-arg TAG=$tag --push.
+        docker pull ubuntu:$tag --platform $platform 
+        docker buildx build -f Dockerfile --platform $platform -t liyane/ubuntu-unminimized:$tag --build-arg TAG=$tag --push.
     done
 
 done

@@ -33,5 +33,3 @@ jobs:
     - name: Build and push
       run: $GITHUB_WORKSPACE/build.sh
 
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
